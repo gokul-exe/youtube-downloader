@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOUTUBE VIDEO DOWNLOADER</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='animation.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800&display=swap" rel="stylesheet">
+    <!-- Add your additional CSS stylesheets here (e.g., Bootstrap, etc.) -->
+</head>
+<header>
+    <h1 class="rainbow-text">YOUTUBE DOWNLOADER<h1>
+    
+</header>
+<body>
+   
+    
+
+
+    <div class="container">
+        <form method="post" action="/" id="downloadForm">
+            <label for="youtube_url">ENTER YOUTUBE URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" required>
+            <br>
+
+            <label for="download_type">CHOOSE DOWNLOAD FORMAT:</label>
+            <select id="download_type" name="download_type" required>
+                <option value="audio">Audio🎶</option>
+                <option value="video">Video📽</option>
+            </select>
+            <br>
+
+            <div class="button-wrapper">
+                <button type="submit" id="downloadButton">Download</button>
+                <div class="progress-bar"></div>
+            </div>
+        </form>
+    </div>
+    <footer align="center">
+        &copy; 2023 YouTube Video Downloader | Made By Gokul |
+        <a href="https://github.com/gokul-exe" class="contact-link">GIT-HUB</a>
+    </footer>
+
+    <!-- Add additional content or sections here (e.g., About, Features, Footer, etc.) -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

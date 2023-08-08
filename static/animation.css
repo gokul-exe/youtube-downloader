@@ -1,0 +1,48 @@
+@keyframes downloadProgress {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .button-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Set width to 100% to make it full-sized */
+  }
+  .button-wrapper:hover {
+    background-color: #45a049;
+  }
+  
+  .button-wrapper button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Set width to 100% to make it full-sized */
+  }
+  
+  .progress-bar {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: width 5s linear;
+  }
+  
+  /* Add this class when the download button is clicked */
+  .progress-active .progress-bar {
+    animation: downloadProgress 5s linear;
+  }
+  
+  

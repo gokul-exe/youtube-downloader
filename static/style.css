@@ -1,0 +1,185 @@
+/* General styling of the page. */
+/* Sets a background color, font-size etc. */
+body {
+  background-color: #EDDDD4;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  font-size: 5em;
+  width:7.8em;
+  line-height: auto;
+  margin-left: 7.6em;
+  margin-right: auto;
+  margin-top: auto;
+  margin-top: auto;
+}
+
+
+/* Style the rainbow text element. */
+.rainbow-text {
+  /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  background: #CA4246;
+  background-color: #CA4246;
+  background: conic-gradient(
+    #CA4246 16.666%, 
+    #E16541 16.666%, 
+    #E16541 33.333%, 
+    #F18F43 33.333%, 
+    #F18F43 50%, 
+    #8B9862 50%, 
+    #8B9862 66.666%, 
+    #476098 66.666%, 
+    #476098 83.333%, 
+    #A7489B 83.333%);
+  
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
+  
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+/* Add animation on hover. */
+.rainbow-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+
+
+
+
+
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+
+
+/* Styles for the main content container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for form labels and input fields */
+label,
+input[type="text"],
+select {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+select download_type option{
+  font-family: "Arial", sans-serif;
+  /* Add any other font-related styles as needed */
+}
+
+
+
+
+/* Styles for the custom download button */
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.button-wrapper button[type="submit"] {
+  font-family: "Work Sans", sans-serif;
+  background-color: #d7e60d;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button#downloadButton:hover {
+  background-color: #14d34d;
+}
+
+select#download_type {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Styles for the dropdown arrow */
+select#download_type::-ms-expand {
+  display: none;
+}
+select#download_type::after {
+  content: "\25BC"; /* Unicode character for the down arrow ▼ */
+  font-size: 16px;
+  padding: 0 8px;
+  color: #333;
+}
+.contact-link {
+  color: #131212;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #00c2ba;
+}
